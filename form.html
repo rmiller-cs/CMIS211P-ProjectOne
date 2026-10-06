@@ -8,7 +8,7 @@
         main {
             max-width: 600px;
             margin: 0 auto;
-            padding: 100px 20px 200px 20px;
+            padding: 100px 20PX 200px 20PX;
             font-family: Arial, sans-serif;
         }
         form {
@@ -16,20 +16,22 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+            padding-right: 20px;
         }
-        input[type="text"],
+       input[type="text"],
         input[type="email"],
         input[type="tel"],
-        select {
+        select,
+        input[type="search"] {
             width: 100%;
             padding: 10px;
-            margin: 5px 0 15px 0;
+            margin: 5px 10px 15px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
         .field {
+            margin-left: 10px;
             margin-bottom: 15px;
-            padding-left: 15px;
             padding-right: 30px;
         }
         .radio-group {
@@ -45,21 +47,23 @@
     <h2>Sign Up for the Coding Club</h2>
     <p>Fill this out and we'll email you before the first meeting.</p>
 <div class="field">
-    <label for="search" id="search" name="search">Search Past Events:</label>
-    <input type="text" id="search" name="search">
+    <label for="search">Search Past events:</label>
+    <input type="search" id="search" name="search">
 </div>
 <div class="field">
     <label for="fullname">Full Name:</label>
-    <input type="text" id="fullname" name="fullName" required>
+    <input type="text" id="fullname" name="fullname" required>
 </div>
 <div class="row">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="phone">
+    <div class="field">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+    </div>
 </div>
 <div class="field">
-    <label for="major">Major:</label>
+    <label for="MAJOR">Major:</label>
     <select id="major" name="major" required>
         <option value="">Select your major</option>
         <optgroup label="Engineering">
@@ -73,13 +77,15 @@
     </select>
 </div>
 <div class="field">
-    <label for="year">Membership Plan:</label>
+    <label for="year">Membership  plan:</label>
     <div class="radio-group">
         <input type="radio" id="year1" name="year" value="1" required>
         <label for="year1">1 Year</label>
         <input type="radio" id="year2" name="year" value="2">
         <label for="year2">2 Years</label>
-</div>
+        
+    
+
 </form>
 
 </main>
